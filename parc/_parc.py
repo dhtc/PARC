@@ -589,7 +589,7 @@ class PARC:
         a, b = find_ab_params(spread, min_dist)
         print('a,b, spread, dist', a,b,spread, min_dist)
         t0 = time.time()
-        X_umap = simplicial_set_embedding(data = X_input, graph=graph, n_components= n_components, initial_alpha= alpha, a = a, b=b, n_epochs=0, metric_kwds={}, gamma=gamma, negative_sample_rate=negative_sample_rate, init=init_pos,  random_state= np.random.RandomState(random_state), metric='euclidean', verbose = 1)
+        X_umap = simplicial_set_embedding(data = X_input, graph=graph, n_components= n_components, initial_alpha= alpha, a = a, b=b, n_epochs=0, metric_kwds={}, gamma=gamma, negative_sample_rate=negative_sample_rate, init=init_pos,  random_state= np.random.RandomState(random_state), metric='euclidean', verbose = 1, output_dens=False, densmap_kwds={}, densmap=False)
         return X_umap
 
 
